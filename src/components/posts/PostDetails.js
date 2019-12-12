@@ -1,7 +1,7 @@
 import React from "react";
 // import ProjectSummary from "./ProjectSummary";
 
-const ProjectDetails = props => {
+const Post = props => {
   const id = props.match.params.id;
   return (
     <div className="container section project-details">
@@ -24,4 +24,4 @@ const ProjectDetails = props => {
   );
 };
 
-export default ProjectDetails;
+export default Post;
