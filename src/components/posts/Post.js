@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Post = () => {
   return (
@@ -8,9 +9,9 @@ const Post = () => {
         <p>Posted by the Net Ninja</p>
         <p className="grey-text">3rd September</p>
         <div className="input-field right-align">
-          <button className="btn grey white-text lighten-0 z-depth-0">
+          <NavLink className="btn grey white-text lighten-0" to="/details">
             Details
-          </button>
+          </NavLink>
         </div>
       </div>
     </div>

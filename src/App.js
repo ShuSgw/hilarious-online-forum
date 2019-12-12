@@ -3,7 +3,8 @@ import Navbar from "./components/layout/Navbar";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Dashboard from "./components/dashboard/Dashboard";
-import Post from "./components/posts/PostDetails";
+import Post from "./components/posts/Post";
+import PostDetails from "./components/posts/PostDetails";
 import CreatePost from "./components/posts/CreatePost";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
@@ -17,6 +18,7 @@ const App = () => {
           <Route exact path="/" component={Dashboard} />
           <Route path="/project/" component={Post} />
           <Route path="/create/" component={CreatePost} />
+          <Route path="/details/" component={PostDetails} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
         </Switch>
