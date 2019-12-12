@@ -1,13 +1,13 @@
 import React from "react";
 import Post from "./Post";
 
-const ProjectList = () => {
+const ProjectList = props => {
+  const posts = props.postsArrays;
   return (
     <div className="project-list section">
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {posts.map(post => {
+        return <Post key={post.id} title={post.title} />;
+      })}
     </div>
   );
 };

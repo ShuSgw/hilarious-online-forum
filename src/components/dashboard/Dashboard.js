@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+
 import PostList from "../posts/PostList";
 class Dashboard extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class Dashboard extends React.Component {
         <div className="row">
           <h3>DashBoard</h3>
           <div className="col s12 m6">
-            <PostList />
+            <PostList postsArrays={this.props.connectPosts.posts} />
           </div>
           <div className="col s12 m5 offset-m1">
             <p>Notification</p>
@@ -19,4 +20,10 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+const mapStateToProps = st => {
+  return {
+    connectPosts: st.postReducer
+  };
+};
+
+export default connect(mapStateToProps)(Dashboard);
